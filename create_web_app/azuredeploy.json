@@ -2,7 +2,7 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "projectName": {
+    "projectname": {
       "type": "string",
       "minLength": 3,
       "maxLength": 11,
@@ -19,16 +19,16 @@
     },
     "linuxFxVersion": {
       "type": "string",
-      "defaultValue": "php|7.0",
+      "defaultValue": "dotnetcore|lts",
       "metadata": {
         "description": "The Runtime stack of current web app"
       }
     }
   },
   "variables": {
-    "storageAccountName": "[concat(parameters('projectName'), uniqueString(resourceGroup().id))]",
-    "webAppName": "[concat(parameters('projectName'), 'WebApp')]",
-    "appServicePlanName": "[concat(parameters('projectName'), 'Plan')]"
+    "storageAccountName": "[concat(parameters('projectname'), uniqueString(resourceGroup().id))]",
+    "webAppName": "[concat(parameters('projectname'), 'WebApp')]",
+    "appServicePlanName": "[concat(parameters('projectname'), 'Plan')]"
   },
   "resources": [
     {
@@ -56,10 +56,10 @@
       "name": "[variables('appServicePlanName')]",
       "location": "[parameters('location')]",
       "sku": {
-        "name": "B1",
-        "tier": "Basic",
-        "size": "B1",
-        "family": "B",
+        "name": "F1",
+        "tier": "Free",
+        "size": "F1",
+        "family": "F",
         "capacity": 1
       },
       "kind": "linux",
