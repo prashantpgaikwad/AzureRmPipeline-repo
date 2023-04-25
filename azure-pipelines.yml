@@ -20,6 +20,6 @@ steps:
     location: 'eastus'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/prashantpgaikwad/AzureRmPipeline-repo/main/create_web_app/azuredeploy.json'
-    overrideParameters: '-projectName etl'
+    overrideParameters: '-projectName ppg'
     deploymentMode: 'Incremental'
     deploymentName: 'deploypipelinetemplate'
