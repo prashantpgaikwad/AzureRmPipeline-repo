@@ -20,6 +20,6 @@ steps:
     location: 'east'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/prashantpgaikwad/AzureRmPipeline-repo/main/create_web_app/azuredeploy.json'
-    overrideParameters: '-projectName AzureRmPipeline-repo'
+    overrideParameters: '-projectName TestGit'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
